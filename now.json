@@ -1,1 +1,1 @@
-{"version":2,"name":"nuxt-static","builds":[{"src":"package.json","use":"@now/static-build"}]}
+{"version":2,"name":"difys","builds":[{"src":"package.json","use":"@now/static-build"}]}
