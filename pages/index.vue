@@ -27,14 +27,7 @@
 						}}</span></v-btn
 					>
 				</v-flex>
-				<v-flex
-					xs12
-					sm8
-					md6
-					:offset-xs3="!copied"
-					:offset-xs4="copied"
-					:class="!copied ? 'pr-1' : 'pl-3'"
-				>
+				<v-flex xs12 sm8 md6>
 					<h5
 						@click="developerMode"
 						class="font-weight-thin grey--text"
@@ -78,7 +71,7 @@
 						serverless botting!
 					</p>
 				</v-flex>
-				<v-flex v-if="offsetTop > 200" xs12 sm8 md6 class="py-2">
+				<v-flex v-if="offsetTop > 250" xs12 sm8 md6 class="py-2">
 					<Terminal />
 				</v-flex>
 				<v-divider width="300" class="mt-4"></v-divider>
@@ -146,7 +139,7 @@ export default {
 			this.copied = true
 		},
 		onScroll(e) {
-			this.offsetTop = e.pageY
+			this.offsetTop = window.pageYOffset
 		},
 		license() {
 			window.open(
