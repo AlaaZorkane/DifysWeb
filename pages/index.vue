@@ -49,7 +49,7 @@
 			</v-layout>
 		</v-responsive>
 		<v-divider></v-divider>
-		<v-responsive height="750">
+		<v-responsive height="752">
 			<v-layout column justify-center align-center>
 				<v-flex xs12 sm8 md6 class="py-2">
 					<h2
@@ -76,6 +76,23 @@
 				</v-flex>
 				<v-divider width="300" class="mt-4"></v-divider>
 				<v-flex xs12 sm8 md6 class="my-3">
+					<h5>
+						<span :class="cadernisHover ? 'cadernisHover' : null"
+							>&lt; </span
+						>in partnership with
+						<a
+							class="cadernis"
+							@mouseenter="cadernis(true)"
+							@mouseleave="cadernis(false)"
+							@click="cadernisLink"
+							>Cadernis</a
+						>
+						<span :class="cadernisHover ? 'cadernisHover' : null">
+							/ &gt;</span
+						>
+					</h5>
+				</v-flex>
+				<v-flex xs12 sm8 md6 class="my-1">
 					<h6 class="license" @click="license">LICENSE: GPLv3</h6>
 				</v-flex>
 			</v-layout>
@@ -130,7 +147,8 @@ export default {
 			copied: false,
 			btnText: "join discord",
 			discordLink: "https://discord.gg/vgvgN2n",
-			offsetTop: 0
+			offsetTop: 0,
+			cadernisHover: false
 		}
 	},
 	methods: {
@@ -146,6 +164,16 @@ export default {
 				"https://choosealicense.com/licenses/gpl-3.0/",
 				"_blank"
 			)
+		},
+		cadernisLink() {
+			window.open("https://cadernis.fr/index.php", "_blank")
+		},
+		cadernis(bool) {
+			if (bool) {
+				this.cadernisHover = true
+			} else {
+				this.cadernisHover = false
+			}
 		},
 		developerMode() {
 			if (!this.developer) {
@@ -183,6 +211,16 @@ export default {
 	text-decoration: underline;
 	cursor: pointer;
 }
+.cadernis {
+	animation: all 0.2ms ease-in-out !important;
+	transition: all 0.2ms ease-in-out !important;
+}
+.cadernis:hover {
+	color: rgb(57, 199, 255) !important;
+}
+.cadernisHover {
+	color: rgb(255, 57, 100) !important;
+}
 a,
 .a {
 	color: white !important;
@@ -204,10 +242,6 @@ a:hover {
 	margin-right: -0.3em;
 }
 
-h5:hover {
-	text-decoration: underline;
-	cursor: pointer;
-}
 polyline {
 	fill: transparent;
 	stroke: white;
