@@ -1,8 +1,6 @@
 window.$docsify = {
-	basePath: "/docs/",
 	name: "difys/documentation",
 	repo: "https://github.com/AlaaZorkane/Difys",
-	subMaxLevel: 2,
 	notFoundPage: "404.md",
 	loadSidebar: true,
 	alias: {
@@ -10,7 +8,7 @@ window.$docsify = {
 	},
 	search: {
 		maxAge: 86400000,
-		paths: [],
+		paths: "auto",
 		placeholder: "Type to search",
 		noData: "No Results! Maybe try discord?",
 		hideOtherSidebarContent: false
