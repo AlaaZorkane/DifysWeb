@@ -1,0 +1,9 @@
+:root {
+	--theme-hue       : 204;
+    --theme-saturation: 30%;
+    --theme-lightness : 100%;
+	--base-background-color: #151515;
+	--mono-hue        : 252;
+    --mono-saturation : 30%;
+	--selection-color      : rgba(28, 121, 197, 0.562);
+}
