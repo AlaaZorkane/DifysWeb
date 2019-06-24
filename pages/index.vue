@@ -129,7 +129,7 @@
 				<v-flex xs1>
 					<a
 						class="font-weight-light text-lowercase text--white"
-						href="/docs"
+						href="/docs/"
 						>docs</a
 					>
 				</v-flex>
