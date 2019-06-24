@@ -1,4 +1,5 @@
 window.$docsify = {
+	basePath: "/docs/",
 	name: "difys/documentation",
 	repo: "https://github.com/AlaaZorkane/Difys",
 	subMaxLevel: 2,
