@@ -2,9 +2,11 @@
     * [Quick Start](/getting-started/quick-start)
     * [Usage](/getting-started/usage)
 * **Core Modules**
+    <!--- jsdoc-generated-sidebar $modules -->
 * **Plugins**
 	* [Installing plugins](/plugins/install)
 	* [Bundled plugins](/plugins/bundle)
+    	<!--- jsdoc-generated-sidebar $plugins -->
 	* [Plugins API](/plugins/api)
 * **Scripting**
 	* [Adding scripts](/scripting/add-script)
