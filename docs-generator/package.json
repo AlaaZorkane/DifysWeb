@@ -1,0 +1,16 @@
+{
+  "name": "docs-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create-file": "jsdoc --template ./node_modules/jsdoc-json --destination docs.json --recurse src",
+    "start": "npm run create-file&&node format.js&&node updater.js"
+  },
+  "author": "Zirpoo",
+  "license": "ISC",
+  "dependencies": {
+    "jsdoc": "^3.6.2",
+    "jsdoc-json": "^2.0.2"
+  }
+}
